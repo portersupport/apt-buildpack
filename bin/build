@@ -159,10 +159,5 @@ echo "launch = true" > ${apt_layer}.toml
 echo "build = true" >> ${apt_layer}.toml
 echo "cache = true" >> ${apt_layer}.toml
 
-localedef -f UTF-8 -i fr_FR $apt_layer/usr/share/locale-langpack/fr/
-localedef -f UTF-8 -i en_US $apt_layer/usr/share/locale-langpack/en_US/
-localedef -f UTF-8 -i en $apt_layer/usr/share/locale-langpack/en/
-
-
 end_time=$(date +%s%N)
 echo "Elapsed time: $(( $(( $end_time - $start_time )) / 1000000 ))ms" | indent
