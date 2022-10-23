@@ -155,6 +155,10 @@ else
   echo -n ":" > $apt_env_dir/PKG_CONFIG_PATH.delim
 fi
 
+locale-gen fr_FR
+locale-gen fr_FR.UTF-8
+update-locale
+
 echo "launch = true" > ${apt_layer}.toml
 echo "build = true" >> ${apt_layer}.toml
 echo "cache = true" >> ${apt_layer}.toml
