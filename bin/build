@@ -103,7 +103,6 @@ else
   for DEB in $(ls -1 $APT_CACHE_DIR/archives/*.deb); do
     echo "$(basename $DEB)" | indent
     dpkg -x $DEB $apt_layer/
-    apt-get install -f
   done
 
   topic "Writing profile script and environment variables"
